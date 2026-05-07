@@ -1,4 +1,4 @@
-{% set spiffe_version = "0.2.5" %}
+{% set spiffe_version = "0.2.6" %}
 {% set spiffe_tls_version = "0.3.0" %}
 
 package:
