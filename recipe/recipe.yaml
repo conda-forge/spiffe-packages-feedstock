@@ -31,7 +31,7 @@ outputs:
         - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --ignore-installed --no-index
     requirements:
       host:
-        - python >=${{ python_min }}
+        - python ${{ python_min }}.*
         - pip
         - setuptools
         - poetry-core >=1.9.0
@@ -46,6 +46,7 @@ outputs:
         - pem >=23
     tests:
       - python:
+          python_version: ${{ python_min }}.*
           imports:
             - spiffe
 
@@ -59,7 +60,7 @@ outputs:
         - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --ignore-installed --no-index
     requirements:
       host:
-        - python >=${{ python_min }}
+        - python ${{ python_min }}.*
         - pip
         - setuptools
         - poetry-core >=1.9.0
@@ -72,6 +73,7 @@ outputs:
         - spiffe ==${{ version }}
     tests:
       - python:
+          python_version: ${{ python_min }}.*
           imports:
             - spiffetls
 
