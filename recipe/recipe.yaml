@@ -33,11 +33,12 @@ outputs:
       host:
         - python >=${{ python_min }}
         - pip
+        - setuptools
         - poetry-core >=1.9.0
       run:
         - python >=${{ python_min }}
         - grpcio >=1.62
-        - cryptography >=42
+        - cryptography >=46,<47
         - pyjwt >=2
         - pyasn1
         - pyasn1-modules
@@ -60,10 +61,12 @@ outputs:
       host:
         - python >=${{ python_min }}
         - pip
+        - setuptools
         - poetry-core >=1.9.0
       run:
         - python >=${{ python_min }}
-        - pyopenssl >=24
+        - pyopenssl >=24,<26
+        - idna
         - spiffe
       run_constraints:
         - spiffe ==${{ version }}
