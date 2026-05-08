@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.2.7"
+  version: "0.2.8"
   spiffe_tls_version: "0.3.0"
 
 recipe:
@@ -10,14 +10,14 @@ recipe:
 
 source:
   - url: https://pypi.org/packages/source/s/spiffe/spiffe-${{ version }}.tar.gz
-    sha256: 840511865158a8910d76b1388c4275e020baca3961a654aeffa29082ed9b9080
+    sha256: 4e386c4faccda7b6e693e08bed39a22d52703b037fcfda64b47190918d8b30bc
     target_directory: spiffe
   - url: https://pypi.org/packages/source/s/spiffe-tls/spiffe_tls-${{ spiffe_tls_version }}.tar.gz
     sha256: ae22d6b65066f5f3652e963e57957639667c3b3e26386c63285cd1672206c3b7
     target_directory: spiffe-tls
 
 build:
-  number: 1
+  number: 0
   noarch: python
 
 outputs:
