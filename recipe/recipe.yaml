@@ -17,7 +17,7 @@ source:
     target_directory: spiffe-tls
 
 build:
-  number: 0
+  number: 1
   noarch: python
 
 outputs:
