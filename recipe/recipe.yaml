@@ -17,7 +17,7 @@ source:
     target_directory: spiffe-tls
 
 build:
-  number: 0
+  number: 1
   noarch: python
 
 outputs:
@@ -37,7 +37,7 @@ outputs:
         - poetry-core >=1.9.0
       run:
         - python >=${{ python_min }}
-        - grpcio >=1.62
+        - grpcio >=1.80
         - cryptography >=46,<47
         - pyjwt >=2
         - pyasn1
