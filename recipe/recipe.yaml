@@ -13,7 +13,7 @@ source:
     sha256: b3626ddbb6c4af582f47795d25e4a12c91ede8f3420111b2048be86c3ed6a5b5
     target_directory: spiffe
   - url: https://pypi.org/packages/source/s/spiffe-tls/spiffe_tls-${{ spiffe_tls_version }}.tar.gz
-    sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+    sha256: 412e94a86b0229e70608ce12d1387c36484fa04c1037aec73dbf88003b95dffd
     target_directory: spiffe-tls
 
 build:
