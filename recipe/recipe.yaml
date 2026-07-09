@@ -1,8 +1,8 @@
 schema_version: 1
 
 context:
-  version: "0.2.10"
-  spiffe_tls_version: "0.3.0"
+  version: "0.3.0"
+  spiffe_tls_version: "0.4.0"
 
 recipe:
   name: spiffe-packages
@@ -10,14 +10,14 @@ recipe:
 
 source:
   - url: https://pypi.org/packages/source/s/spiffe/spiffe-${{ version }}.tar.gz
-    sha256: 08c0a6c8280fa278c91d001579b20ce3ed0464f9fe541fbc3c8d11ba2d60e2c5
+    sha256: b3626ddbb6c4af582f47795d25e4a12c91ede8f3420111b2048be86c3ed6a5b5
     target_directory: spiffe
   - url: https://pypi.org/packages/source/s/spiffe-tls/spiffe_tls-${{ spiffe_tls_version }}.tar.gz
-    sha256: ae22d6b65066f5f3652e963e57957639667c3b3e26386c63285cd1672206c3b7
+    sha256: 412e94a86b0229e70608ce12d1387c36484fa04c1037aec73dbf88003b95dffd
     target_directory: spiffe-tls
 
 build:
-  number: 1
+  number: 0
   noarch: python
 
 outputs:
@@ -66,7 +66,7 @@ outputs:
         - poetry-core >=1.9.0
       run:
         - python >=${{ python_min }}
-        - pyopenssl >=24,<26
+        - pyopenssl >=26,<27
         - idna
         - spiffe
       run_constraints:
